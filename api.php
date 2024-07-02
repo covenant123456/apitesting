@@ -25,7 +25,7 @@ if ($clientIP == '::1') {
     $clientIP = '8.8.8.8'; // Default to Google's public DNS server for local testing
 }
 
-$visitorName = isset($_GET['visitor_name']) ? htmlspecialchars($_GET['visitor_name']) : 'Visitor';
+$visitorName = isset($_POST['visitor_name']) ? htmlspecialchars($_POST['visitor_name']) : 'Visitor';
 
 // Use ipinfo.io API to get location information
 $ipinfoToken = '8c8beab3595e6c';
